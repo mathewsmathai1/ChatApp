@@ -19,7 +19,8 @@ const routes : Routes = [
     AppComponent,
     NavmenuComponent,
     HomeComponent,
-    SignUpComponent
+    SignUpComponent,
+    MessageViewComponent
   ],
   imports: [
     BrowserModule,
