@@ -1,0 +1,9 @@
+
+<a  class='a_element' *ngFor="let item of navList" [routerLink]="[{ outlets: { navPages : item}}]" >{{item}}</a>  <!--href={{navLink[item]}}-->
+<!--[href]=navLink[item]-->
+<br>
+<!--a [routerLink]="[{ outlets: { navPages : ['Home']}}]" [queryParams]="{user: 'userId'}">Get Home</a--> <br>
+<!--a [routerLink]="[{ outlets: { navPages : ['SignUp']}}]"   >Get SignUp</a-->
+<router-outlet name='navPages'></router-outlet>
+<!--script>console.log(currentItem)</script-->
+

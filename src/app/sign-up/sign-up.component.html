@@ -1,0 +1,12 @@
+<form [formGroup]="signUpForm">
+   <label>Email Id:</label>
+   <input type="email" placeholder="mymail@qracle.com" name="emailId" [formControl]="signUpForm.controls['emailId']">
+   <br><br><br>
+   <label>Password:</label>
+   <input type="password" placeholder="Password" name="password"  [formControl]="signUpForm.controls['password']">
+   <br><br><br>
+   <label>Confirm Password:</label>
+   <input type="password" placeholder="Password" name="confirmPassword"  [formControl]="signUpForm.controls['confirmPassword']">
+   <br><br><br>
+   <Button id="b1" type="sumbit" name="submit"  >SignUp</Button>
+</form>
