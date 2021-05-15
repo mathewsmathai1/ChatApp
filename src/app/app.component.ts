@@ -10,7 +10,7 @@ export class AppComponent {
 
  // navList  : Array<string> = ['Home','SignUp','Login','MyChats'];
   title = 'chat-client';
-  constructor(public message : MessageViewComponent)
+  constructor()//public message : MessageViewComponent)
   {
     
   }

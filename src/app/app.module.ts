@@ -9,6 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MessageViewComponent } from './messages/message-view/message-view.component';
+import { MessagesModule } from './messages/messages.module';
 const routes : Routes = [
   {path: 'Home', component : HomeComponent , outlet: 'navPages'},
     {path: 'SignUp', component : SignUpComponent , outlet: 'navPages' },  //outlet: 'navPageSignUp' }
@@ -19,16 +20,18 @@ const routes : Routes = [
     AppComponent,
     NavmenuComponent,
     HomeComponent,
-    SignUpComponent,
-    MessageViewComponent
+    SignUpComponent
+    
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    MessagesModule,
     RouterModule.forRoot(routes)//, {useHash: true})
   ],
-  providers: [{provide: MessageViewComponent, useClass:MessageViewComponent}],
+  providers: [],//{provide: MessageViewComponent, useClass:MessageViewComponent}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
