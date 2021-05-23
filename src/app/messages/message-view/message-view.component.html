@@ -4,12 +4,15 @@
     <div *ngIf='message == "1"' style="height: 130px; width: 30%; background-color: green;  display: block; ">
       <p style="color: black;">{{dummyText[i]}}</p> </div>
 
-      <div *ngIf='message == "2"' style="height: 130px; width: 30%; background-color: purple; display: block; position: relative;  float:right; ">
+      <div *ngIf='message == "2"' style="height: 130px; width: 30%; background-color: purple; display: block; position: relative; clear: both;  float:right; ">
          <p style="color: black;">{{dummyText[i]}}</p>
       </div>
    </div>
 
-</div>   
+</div>
+<div  style="clear: both;">  
+<button (click)="addToMessage()" style="clear: both;">Click To Push Message</button>
+</div> 
    <!--p *ngFor="let message of dummyArray">{{message}}</p>
    <a *ngIf="isTrue == 0">Hello</a-->
 
