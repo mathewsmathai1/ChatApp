@@ -10,17 +10,20 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MessageViewComponent } from './messages/message-view/message-view.component';
 import { MessagesModule } from './messages/messages.module';
+import { LoginComponent } from './login/login.component';
 const routes : Routes = [
   {path: 'Home', component : HomeComponent , outlet: 'navPages'},
     {path: 'SignUp', component : SignUpComponent , outlet: 'navPages' },  //outlet: 'navPageSignUp' }
-    {path: 'MyChats', component : MessageViewComponent , outlet: 'navPages' }
+    {path: 'MyChats', component : MessageViewComponent , outlet: 'navPages' },
+    {path: 'Login', component : LoginComponent , outlet: 'navPages' }
  ];
 @NgModule({
   declarations: [
     AppComponent,
     NavmenuComponent,
     HomeComponent,
-    SignUpComponent
+    SignUpComponent,
+    LoginComponent
     
     
   ],

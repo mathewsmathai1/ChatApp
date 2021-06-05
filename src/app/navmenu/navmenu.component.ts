@@ -12,7 +12,7 @@ export class NavmenuComponent implements OnInit {
   navLink  : any = {
                     Home : "http://localhost:4200/Home",
                     SignUp : "http://localhost:4200/SignUp",
-                    Login : "http://localhost:4200/Login",
+                    Login : "http://localhost:4200/login",
                     MyChats : "http://localhost:4200/MyChats"
                   };
   navTrack : number = 0;

@@ -1,6 +1,6 @@
 <h2>Sir_Monk</h2>
 <div style="height: 100%; width: 100%; background-color: powderblue;display: block; padding:17px; position:relative; ">
-   <div *ngFor="let message of dummyArray; let i = index" style="width: 100%; margin: 10px;  display: block; position: relative; clear: both;"> 
+   <div *ngFor="let message of dummyObservable | async; let i = index" style="width: 100%; margin: 10px;  display: block; position: relative; clear: both;"> 
     <div *ngIf='message == "1"' style="height: 130px; width: 30%; background-color: green;  display: block; ">
       <p style="color: black;">{{dummyText[i]}}</p> </div>
 

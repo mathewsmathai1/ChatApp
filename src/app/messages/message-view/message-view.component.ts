@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import {Observable, of} from 'rxjs';
 
 
 
@@ -19,8 +20,11 @@ export class MessageViewComponent implements OnInit {
                                 "message 5","message 6",
                                 "message 7","message 8"];
   isTrue : number  = 0;
+
+  dummyObservable : Observable<Array<String>>  = null;
   constructor(private changeDetectorRef: ChangeDetectorRef) { 
     //this.dummyArray = ["1","2","1","2"];
+    this.dummyObservable = of(this.dummyArray);
     
   }
   addToMessage()
@@ -29,6 +33,7 @@ export class MessageViewComponent implements OnInit {
     this.dummyText.push("Pushed Message");
     this.dummyArray.push("1");
     this.changeDetectorRef.detectChanges();
+    console.log(this.dummyObservable._subscribe);
   }
   ngOnInit(): void {
   }

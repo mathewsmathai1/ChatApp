@@ -1,4 +1,4 @@
-<form [formGroup]="signUpForm">
+<!--form [formGroup]="signUpForm" action="http://localhost:5000/signUp" method="post" #form>
    <label>Email Id:</label>
    <input type="email" placeholder="mymail@qracle.com" name="emailId" [formControl]="signUpForm.controls['emailId']">
    <br><br><br>
@@ -8,5 +8,20 @@
    <label>Confirm Password:</label>
    <input type="password" placeholder="Password" name="confirmPassword"  [formControl]="signUpForm.controls['confirmPassword']">
    <br><br><br>
-   <Button id="b1" type="sumbit" name="submit"  >SignUp</Button>
+   <Button id="b1" type="submit" name="submit" (click)="form.submit()" >SignUp</Button>
+</form-->
+
+<form action="http://localhost:5000/signUp" method="post" #form>
+   <label>Email Id:</label>
+   <input type="email" placeholder="mymail@qracle.com" name="emailId">
+   <br><br><br>
+   <label>Password:</label>
+   <input type="password" placeholder="Password" name="password" >
+   <br><br><br>
+   <label>Confirm Password:</label>
+   <input type="password" placeholder="Password" name="confirmPassword" >
+   <br><br><br>
+   <Button id="b1" type="submit" name="submit" >SignUp</Button>
 </form>
+
+
